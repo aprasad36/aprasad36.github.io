@@ -18,15 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+theme: jekyll-theme-minimal
 title: Aditya Prasad
-email: aprasad4@usc.edu
 description: Undergraduate researcher in USC's Theory Group
 logo: https://media.licdn.com/dms/image/C4E03AQFPtU7E-1-ENA/profile-displayphoto-shrink_800_800/0/1607716256258?e=1684368000&v=beta&t=uZfUHfKs_xtOITXzvcuxwZIslexu6qW3mWEP1eqFbiI # the subpath of your site, e.g. /blog
+show_downloads: false
 
 # Build settings
-theme: jekyll-theme-minimal
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
