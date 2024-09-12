@@ -11,8 +11,8 @@
         <aside class="sidebar">
             <svg class="header-pattern" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                 <defs>
-                    <pattern id="complex-tessellation" x="-25" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-                        <!-- x = -25 to center the pattern -->
+                    <pattern id="complex-tessellation" x="-35" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                        <!-- x = -35 to center the pattern -->
                         <!-- Large diamond -->
                         <path d="M100,0 L200,100 L100,200 L0,100 Z" fill="none" stroke="#ffffff" stroke-width="2"/>
                         
@@ -39,14 +39,14 @@
             <div class="sidebar-content">
                 <img src="./Profile Picture.jpg" alt="Aditya Prasad" class="profile-pic">
                 <h1>Aditya Prasad</h1>
-                <p>[firstname][lastname]@uchicago.edu</p>
+                <li class="sidebar-item nav-hidden"><p>[fullname]@uchicago.edu</p></li>
                 <nav>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#teaching">Teaching</a></li>
-                        <li><a href="./projects.html">Projects</a></li>
-                        <li><a href="./writing.html">Writing</a></li>
+                        <li class="sidebar-item"><a href="#about">About</a></li>
+                        <li class="sidebar-item"><a href="#publications">Publications</a></li>
+                        <li class="sidebar-item nav-hidden"><a href="#teaching">Teaching</a></li>
+                        <li class="sidebar-item nav-hidden"><a href="./projects.html">Projects</a></li>
+                        <li class="sidebar-item"><a href="./writing.html">Writing</a></li>
                     </ul>
                 </nav>
             </div>
@@ -65,6 +65,9 @@
                 <p>
                     My research interests lie in algorithm design for convex and combinatorial optimization, algorithmic fairness, and foundations of deep learning.
                     Previously, I have worked on projects in contract design, where I used combinatorial optimization techniques with applications in economics.
+                </p>
+                <p>
+                    I have also worked on projects in CS Education, where I designed a Python library that creates an interactive visualizations of Dynamic Programs.
                 </p>
             </section>
             
@@ -109,6 +112,15 @@
                 </ul>
             </section>
             
+            <section id="contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        Email: [fullname]@uchicago.edu
+                    </li>
+                </ul>
+            </section>
+
         </main>
     </div>
 </body>

@@ -19,8 +19,9 @@ body {
     min-height: 100vh;
 }
 .sidebar {
-    flex: 0 0 270px;
-    /* width: 15%;  for adjustable width. Fix this later. */
+    width: 15%;
+    max-width: 250px;
+    min-width: 150px;
     background-color: var(--primary-color);
     padding: 40px;
     display: flex;
@@ -36,8 +37,9 @@ body {
     overflow-y: auto;
 }
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--accent-color);
@@ -60,6 +62,12 @@ body {
     z-index: 2;
     text-align: center;
     color: white;
+}
+.sidebar-item {
+    display: block;
+}
+.sidebar-item.nav-hidden {
+    display: block;
 }
 h1, h2 {
     margin: 0;
@@ -110,9 +118,6 @@ section:hover {
     padding-left: 20px;
     border-left: 3px solid var(--accent-color);
 }
-/* .author {
-    color: #5c1000;
-} */
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -129,4 +134,66 @@ a:hover {
 .course-title {
     font-weight: 700;
     color:black;
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .profile-pic {
+        display: none;
+    }
+    
+    .sidebar-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-content h1 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    
+    nav {
+        margin-top: 0;
+        flex-grow: 1;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 5px 0 5px 40px;
+    }
+    
+    nav a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    .sidebar-item.nav-hidden {
+        display: none;
+    }
 }
