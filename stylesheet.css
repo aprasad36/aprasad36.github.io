@@ -136,6 +136,11 @@ a:hover {
     color:black;
 }
 
+footer {
+    text-align: right;
+    color:gray;
+}
+
 @media (max-width: 800px) {
     .sidebar {
         width: 100%;
