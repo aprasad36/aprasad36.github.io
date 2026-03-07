@@ -3,8 +3,8 @@
     --secondary-color: #44DB76;
     --accent-color: #EDCF6C;
     --text-color: #333;
-    --background-color: #EDEAE5;
-    --card-color: #F5F3EF;
+    --background-color: #E0DCD5;
+    --card-color: #E8E5DF;
 }
 
 body {
@@ -184,6 +184,92 @@ footer {
     color: gray;
 }
 
+/* Project card styles */
+.projects-section {
+    background-color: var(--card-color);
+}
+
+.project-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #EDEAE5;
+    border-radius: 16px;
+    overflow: hidden;
+    flex: 0 1 calc(40% - 14px);
+    max-width: calc(40% - 14px);
+    border: 1px solid #d5d1cb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-card-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-card-body {
+    padding: 16px 20px 20px;
+}
+
+.project-card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 800;
+    color: var(--text-color);
+    margin: 0 0 8px 0;
+}
+
+.project-card-description {
+    color: #555;
+    font-size: 0.82em;
+    line-height: 1.5;
+    margin: 0 0 14px 0;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #F0EDE7;
+    color: #555;
+    padding: 3px 9px;
+    border-radius: 14px;
+    font-size: 0.68em;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #d5d1cb;
+    transition: background-color 0.2s ease;
+}
+
+.project-tag:hover {
+    background-color: #E8E5DF;
+}
+
+.tag-icon {
+    font-size: 1em;
+}
+
 @media (max-width: 800px) {
     .sidebar {
         width: 100%;
@@ -243,5 +329,10 @@ footer {
 
     .sidebar-item.nav-hidden {
         display: none;
+    }
+
+    .project-card {
+        flex: 0 1 100%;
+        max-width: 100%;
     }
 }
